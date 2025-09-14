@@ -38,7 +38,7 @@ buttons = [
     ("4", 2, 0), ("5", 2, 1), ("6", 2, 2), ("*", 2, 3),
     ("1", 3, 0), ("2", 3, 1), ("3", 3, 2), ("-", 3, 3),
     ("0", 4, 0), (".", 4, 1), ("C", 4, 2), ("+", 4, 3),
-    ("←", 5, 0), ("=", 5, 1, 3)  
+    ("⌫", 5, 0), ("=", 5, 1, 3)  
 ]
 
 for (text, row, col, *opt) in buttons:
@@ -47,7 +47,7 @@ for (text, row, col, *opt) in buttons:
         action = clear
     elif text == "=":
         action = calculate
-    elif text == "←":
+    elif text == "⌫":
         action = backspace
     else:
         action = lambda t=text: press(t)
